@@ -5,7 +5,6 @@ import { Button, Modal, Form, Container } from "react-bootstrap";
 // import loading from "../../assets/loader.gif";
 import "./home.css";
 import { addTransaction, getTransactions } from "../../utils/ApiRequest";
-import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Spinner from "../../components/Spinner";
@@ -15,6 +14,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import Analytics from "./Analytics";
+const axios = require("axios");
 
 const Home = () => {
   const navigate = useNavigate();

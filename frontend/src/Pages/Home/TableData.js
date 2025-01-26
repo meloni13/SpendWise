@@ -5,7 +5,7 @@ import EditNoteIcon from "@mui/icons-material/EditNote";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import "./home.css";
 import { deleteTransactions, editTransactions } from "../../utils/ApiRequest";
-import axios from "axios";
+const axios = require("axios");
 
 const TableData = (props) => {
   const [show, setShow] = useState(false);
