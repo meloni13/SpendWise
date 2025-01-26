@@ -72,8 +72,9 @@ jobs:
     - name: Create MongoDB Secret
       run: |
         kubectl create secret generic mongodb-secret \
-          --from-literal=mongodb-url=$(echo -n "mongodb://${{ secrets.MONGO_USERNAME }}:${{ secrets.MONGO_PASSWORD }}@${{ secrets.MONGO_URL }}" | base64) \
+          --from-literal=mongodb-url="mongodb://${{ secrets.MONGO_USERNAME }}:${{ secrets.MONGO_PASSWORD }}@${{ secrets.MONGO_URL }}" \
           --dry-run=client -o yaml | kubectl apply -f -
+
 
 
     - name: Deploy to Kubernetes
