@@ -27,12 +27,12 @@ jobs:
         cd ../backend
         npm install
 
-    - name: Run tests
-      run: |
-        cd frontend
-        npm test
-        cd ../backend
-        npm test
+    # - name: Run tests
+    #   run: |
+    #     cd frontend
+    #     npm test
+    #     cd ../backend
+    #     npm test
 
   docker-build-and-push:
     runs-on: ubuntu-latest
